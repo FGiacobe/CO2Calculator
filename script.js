@@ -66,16 +66,6 @@ document.getElementById('co2Form').addEventListener('submit', function(event) {
     const distance = parseFloat(document.getElementById('distance').value);
     const transport = document.getElementById('transport').value;
     
-    if (distance <= 0) {
-        alert('Por favor, insira uma distância válida maior que zero.');
-        return;
-    }
-    
-    if (!transport) {
-        alert('Por favor, selecione um meio de transporte.');
-        return;
-    }
-    
     const result = calculateCO2(distance, transport);
     displayResult(result);
 });
